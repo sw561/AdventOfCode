@@ -35,9 +35,6 @@ def row(s, r):
     s = "{}-{}".format(s, r)
     return knot_hash(s)
 
-def part1(s):
-    return sum(sum(1 for i in row(s, r) if i=='1') for r in range(128))
-
 def neighbours(grid, pos):
     # Find all neighbours which contain data, not including diagonals
 
@@ -71,10 +68,8 @@ def find_all_groups(grid):
             yield group
             visited.update(group)
 
-def part2(s):
-    rows = []
-    for r in range(128):
-        rows.append(row(s, r))
+def main(s):
+    rows = [row(s, r) for r in range(128)]
 
     # Part 1
     print(sum(sum(1 for i in r if i=='1') for r in rows))
@@ -87,13 +82,8 @@ if __name__=="__main__":
     example = "flqrgnkx"
     s = input().strip()
 
-    for r in range(8):
-        print("".join('#' if i=='1' else '.' for i in row(example, r)[:8]))
+    # for r in range(8):
+    #     print("".join('#' if i=='1' else '.' for i in row(example, r)[:8]))
 
-    # # Part 1
-    # print(part1(example))
-    # print(part1(s))
-
-    # Part 2
-    # print(part2(example))
-    print(part2(s))
+    # print(main(example))
+    print(main(s))

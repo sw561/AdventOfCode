@@ -1,0 +1,11 @@
+for_all cpy 1
+cpy 20 a
+for_all print
+print 1
+print 1
+add d b
+cpy c b
+cpy d c
+print %c
+dec a
+jnz a -5

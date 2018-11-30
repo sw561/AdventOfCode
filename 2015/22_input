@@ -1,0 +1,6 @@
+name, cost mana, damage, hit_points, armor, mana_bonus, n_turns_effective
+MagicMissile  53  4  0  0    0  1
+Drain         73  2  2  0    0  1
+Shield       113  0  0  7    0  6
+Poison       173  3  0  0    0  6
+Recharge     229  0  0  0  101  5

@@ -1,0 +1,14 @@
+cpy 7 a
+cpy a b
+dec b
+cpy a d
+cpy 0 a
+mul b d a
+dec b
+cpy 0 d
+mul b 2 c
+tgl c
+cpy -16 c
+jnz 1 -8
+mul 73 95 b
+add a b a
